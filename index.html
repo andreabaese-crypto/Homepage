@@ -16,7 +16,6 @@
       line-height: 1.7;
     }
 
-    /* --- Header --- */
     header {
       background-color: #fff;
       padding: 1.2em 4em;
@@ -24,14 +23,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      transition: all 0.3s ease;
+      transition: box-shadow 0.3s ease;
     }
 
     header.scrolled {
-      padding: 0.8em 4em;
-      background-color: rgba(255,255,255,0.9);
-      backdrop-filter: blur(8px);
-      border-color: #ccc;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
     .header-nav {
@@ -54,22 +50,18 @@
       font-weight: 500;
       font-size: 1em;
       position: relative;
-      transition: color 0.3s;
     }
 
     .right-link::after {
-      content: "";
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0%;
+      content: '';
+      display: block;
       height: 2px;
-      background: #00bfa5;
-      transition: width 0.3s ease;
-    }
-
-    .right-link:hover {
-      color: #00bfa5;
+      width: 0;
+      background: linear-gradient(90deg, #00bfa5, #66f5d8);
+      transition: width 0.4s ease;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
     }
 
     .right-link:hover::after {
@@ -78,12 +70,11 @@
 
     .spacer { height: 120px; }
 
-    /* --- Section Boxes --- */
     .sections {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1em;
+      gap: 1.5em;
       padding: 2em;
     }
 
@@ -98,19 +89,19 @@
       text-align: center;
       font-size: 1.1em;
       font-weight: 500;
-      transition: transform 0.3s ease, border-color 0.3s, background-color 0.3s;
+      transition: border-color 0.3s, background-color 0.3s, transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
     }
 
     .section-box:hover {
       border-color: #999;
       background-color: #f9f9f9;
-      transform: translateY(-4px) scale(1.02);
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
     .section-box a { color: inherit; text-decoration: none; }
 
-    /* --- Detail Sections --- */
     section.detail {
       max-width: 900px;
       margin: 3em auto;
@@ -118,7 +109,7 @@
       background-color: #fff;
       border-radius: 6px;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
@@ -146,7 +137,6 @@
 
     .about-content { display: flex; flex-direction: column; gap: 0.2em; align-items: flex-start; }
 
-    /* --- Kontakt --- */
     .contact p, .contact a {
       text-align: center;
       font-size: 1em;
@@ -165,37 +155,31 @@
       border-top: 1px solid #eaeaea;
     }
 
-    /* --- Dropout Stil + Animation --- */
+    /* --- Dropout Stil --- */
     .dropout-header {
       display: flex;
       align-items: center;
-      gap: 0.5em;
+      justify-content: space-between;
       cursor: pointer;
       user-select: none;
       margin-top: 1em;
-      color: #666;
-      font-weight: 500;
+      transition: color 0.3s;
     }
-
+    .dropout-header:hover { color: #00bfa5; }
+    .dropout-header span { font-weight: 500; }
     .dropout-toggle {
       font-size: 1.2em;
-      transition: transform 0.3s, color 0.3s;
-      flex-shrink: 0;
-      color: #111;
+      transition: transform 0.3s;
     }
-
     .dropout.open .dropout-toggle {
       transform: rotate(45deg);
-      color: #00bfa5;
     }
-
     .dropout-content {
       max-height: 0;
-      opacity: 0;
       overflow: hidden;
-      transition: max-height 0.6s ease, opacity 0.6s ease;
+      opacity: 0;
+      transition: max-height 0.6s ease, opacity 0.4s ease;
     }
-
     .dropout.open .dropout-content {
       max-height: 1000px;
       opacity: 1;
@@ -231,36 +215,154 @@
   <div class="section-box"><a href="#kontakt">Kontakt / Termin</a></div>
 </div>
 
-<!-- --- Inhalte (unverändert) --- -->
-<!-- alles ab hier bleibt exakt gleich wie bei dir, Text wurde NICHT verändert -->
+<!-- HIER KOMMT DEIN KOMPLETTER INHALT 1:1 AUS DER LIEBLINGSVERSION -->
+<!-- SEXUALTHERAPIE -->
+<section id="sexualtherapie" class="detail">
+  <h2>Sexualtherapie</h2>
+  <p>In der Sexualtherapie arbeite ich mit Ihnen als Einzelperson an Themen der Sexualität. Als Grundlage dient mir eine moderne Adaption des körperorientierten Ansatzes Sexocorporel und die systemische Sexualberatung.</p>
+  <div class="dropout">
+    <div class="dropout-header">
+      <span>Mögliche Themen:</span>
+      <span class="dropout-toggle">✚</span>
+    </div>
+    <div class="dropout-content">
+      <ul>
+        <li>Wie exploriere ich meinen Umgang mit Lust und Unlust?</li>
+        <li>Wie exploriere und identifiziere ich mich mit sexuellen Fantasien/Vorlieben/Kinks?</li>
+        <li>Wie erforsche ich meinen sexuellen Körper (z.B. sexuelles Selbstbild, Selbstvertrauen, Scham, sexuelle Identität, sexuelle Orientierung?</li>
+        <li>Wie finde ich nach einer Geburt in die Sexualität mit meinem neuen Körper zurück?</li>
+        <li>Wie kann ich Orgasmen unterschiedlich empfinden oder verfrühtes oder ausbleibendes Kommen steuern lernen?</li>
+        <li>Wie kann ich in Beziehung treten mit meiner Sexualität? Wie verführe ich? Wie erfrage ich?</li>
+        <li>Wie gehe ich mit Schmerzen beim Sex um (z. B. Vaginismus, Dyspareunie, Erektile Dysfunktion, Umgang mit Geschlechtskrankheiten, Sexualität bei chronischen Erkrankungen wie z.B. Krebs, Diabetes etc.)?</li>
+        <li>Wie gehe ich mit gesellschaftlich stigmatisierten Themen um? (z.B. Sexsucht, Asexualität, aussergewöhnliche sexuelle Vorlieben, Versagensängste, Umgang mit Pornografie)</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-<!-- ... (deine restlichen Sections bleiben identisch, du kannst sie einfach übernehmen) ... -->
+<!-- PAARTHERAPIE -->
+<section id="paartherapie" class="detail">
+  <h2>Paartherapie</h2>
+  <p>In der Paartherapie arbeite ich mit einer modernen Adaption des körperorientierten Ansatzes Sexocorporel, inspiriert von der systemischen (Sexual-)Beratung und der emotionsfokussierten Paartherapie.</p>
+  <div class="dropout">
+    <div class="dropout-header">
+      <span>Mögliche Themen:</span>
+      <span class="dropout-toggle">✚</span>
+    </div>
+    <div class="dropout-content">
+      <ul>
+        <li>Wie gestalten und entdecken wir gemeinsam Sexualität, Lebendigkeit, Intimität und Verbindung?</li>
+        <li>Wie gehen wir mit unterschiedlichen sexuellen Wünschen/Fantasien/Vorlieben/Kinks um?</li>
+        <li>Wie können wir Bedürfnisse nach Nähe und Autonomie vereinbaren?</li>
+        <li>Wie funktioniert die Vereinbarkeit von Sexualität und Kinderwunsch?</li>
+        <li>Wie weiter nach Affären, Vertrauensbrüchen, Eifersucht oder Entscheidungskonflikten?</li>
+        <li>Wie gestalten wir unsere Beziehungsform (z. B. offene Beziehungsmodelle)?</li>
+        <li>Wie lernen wir Kommunikationstools? (z.B. häufig Streit, Umgang mit äusseren Stressfaktoren, Formulierungen von Wünschen/Bedürfnissen)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOPS -->
+<section id="workshops" class="detail">
+  <h2>Sexuelle Bildung & Workshops</h2>
+  <p>Ich biete auf Anfrage individuell gestaltete Workshops, Seminare oder Inputreferate zu Themen der Sexualität an. Die Angebote können sowohl für Fachpersonen als auch für Bewohnende oder Klient*innen einer Institution konzipiert werden.</p>
+  <div class="dropout">
+    <div class="dropout-header">
+      <span>Mögliche Themen:</span>
+      <span class="dropout-toggle">✚</span>
+    </div>
+    <div class="dropout-content">
+      <ul>
+        <li>Evaluation von Institutionen aus sexologischer Sicht</li>
+        <li>Reflexion zum sexuellen Körper, Identität und Orientierung</li>
+        <li>Umgang mit sexualisierter Gewalt und Diskriminierung</li>
+        <li>Umgang mit Sexueller Vielfalt und Selbstbestimmung</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER MICH -->
+<section id="uebermich" class="detail">
+  <h2>Über mich</h2>
+  <div class="about-content" style="gap: 0.2em;">
+    <p>Als ausgebildete Sexologin MA beschäftige ich mich mit Sexualität auf unterschiedlichen Ebenen. Wissenschaftlich, beraterisch/therapeutisch und in der Sexuellen Bildung. Sexualität ist für mich weit mehr als eine körperliche Funktion. Sie ist Kommunikation, Beziehung, Identität, Hemmungslosigkeit, Lust – manchmal auch Angst, Grenzerfahrung und Herausforderung.</p>
+    <div class="dropout">
+      <div class="dropout-header">
+        <span>mehr lesen</span>
+        <span class="dropout-toggle">✚</span>
+      </div>
+      <div class="dropout-content">
+        <p>Meine Arbeitsweise folgt dem körperorientierten Ansatz Sexocorporel und der systemischen Sexualberatung. Inspiriert bin ich von der emotionsfokussierten Paartherapie und dem Wheel of Consent von Betti Martin. 
+        Während den Sitzungen finden keine Berührungen statt. Wo sinnvoll, werden wir mit Körperübungen arbeiten, die entweder direkt angeleitet oder nach Hause genommen werden können. Wir gehen von ihrem Anliegen aus und erarbeiten gemeinsam einen zielorientierten Behandlungsplan. Dabei beleuchten wir kognitive, emotionale, physiologische und beziehungsbezogene Aspekte der Sexualität. Ohne Bewertung, ohne Druck, dafür mit Empathie, Reflexion und Humor.</p>
+        <p>Während meiner Ausbildung habe mich intensiv mit der Gestaltung der Sexualität von trans* Personen auseinandergesetzt (siehe Masterarbeit). Weitere Schwerpunkte bildet die sexologische Arbeit mit alternativen Beziehungsformen, Umgang mit Lustlosigkeit und präventive Bildungsangebote zu sexueller Gewalt und sexuelles Körperbild. In einer Sexual- und Paartherapie sind allerdings alle Themen willkommen. Ich schätze die Vielfältigkeit der Themen rund um Sexualität und freue mich, wenn Sie unverbindlich mit mir Kontakt aufnehmen, um Ihr individuelles Thema anzuschauen, Wo angebracht, arbeite ich gerne interdisziplinär. So verweise ich sie an medizinische, psychologische oder beraterische Fachpersonen und Institutionen.</p>
+        <p>Ausbildung und Tätigkeiten:</p>
+        <ul>
+          <li>Master of Arts in Sexologie am Institut für Sexualpädagogik und Sexualtherapie Zürich</li>
+          <li>Bachelor of Arts in Sozialer Arbeit an der ZHAW</li>
+          <li>Workshopleiterin für Kinderschutz Schweiz: <em>„Mein Körper gehört mir“</em> und <em>„Love Limits“</em></li>
+          <li>Workshopleiterin für die Fachstelle jumpps*: <em>„beyou*tiful“</em>, <em>„fair lieben“</em>, <em>„mein Beruf“</em></li>
+          <li>Veröffentlichung: Masterarbeit: <em>Sexualberatung mit dem Modell Sexocoporel mit trans* Personen...</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KOSTEN -->
+<section id="kosten" class="detail">
+  <h2>Kosten</h2>
+  <p>Mir ist es ein Anliegen, dass finanzielle Aspekte kein Hindernis für eine Beratung oder Therapie darstellen. Wenn Ihre aktuellen Mittel begrenzt sind, finden wir gemeinsam eine Lösung.</p>
+  <div class="dropout">
+    <div class="dropout-header">
+      <span>Preise</span>
+      <span class="dropout-toggle">✚</span>
+    </div>
+    <div class="dropout-content">
+      <ul>
+        <li>Einzelperson, 60 Minuten in der Praxis: 110.–</li>
+        <li>Einzelperson, 60 Minuten per Zoom: 90.–</li>
+        <li>Paare, 60 Minuten in der Praxis: 160.–</li>
+        <li>Workshops, Referate: nach Vereinbarung</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="detail contact">
+  <h2>Kontakt / Termin</h2>
+  <p>Sie können sich unverbindlich bei mir melden per Telefon, WhatsApp, Signal oder E-Mail, um Ihr Anliegen zu schildern und herauszufinden, ob eine Beratung passend für Sie ist.</p>
+  <p><strong>Standort:</strong> Zähringerstrasse 12, 8001 Zürich</p>
+  <p><i class="fas fa-envelope"></i> <a href="mailto:andrea.baese@gmx.ch">andrea.baese@gmx.ch</a></p>
+  <p><i class="fas fa-phone"></i> <a href="tel:+41792096327">079 000 00 00</a></p>
+</section>
 
 <footer>&copy; 2025 Sexologische Beratung – Alle Rechte vorbehalten</footer>
 
 <script>
-  // Header scroll effect
-  window.addEventListener('scroll', () => {
-    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  // Sichtbarkeit beim Scrollen (mit Delay)
+  // Scroll-Animation für Sections
   const detailSections = document.querySelectorAll('.detail');
   const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry, index) => {
-      if(entry.isIntersecting){
-        setTimeout(() => entry.target.classList.add('visible'), index * 150);
-      }
+    entries.forEach(entry => {
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); }
     });
   }, { threshold: 0.1 });
   detailSections.forEach(section => observer.observe(section));
 
-  // Dropout Funktion
+  // Dropout-Funktion
   document.querySelectorAll('.dropout-header').forEach(header => {
     header.addEventListener('click', () => {
       const parent = header.closest('.dropout');
       parent.classList.toggle('open');
     });
+  });
+
+  // Header Shadow on Scroll
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 10) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
   });
 </script>
 
