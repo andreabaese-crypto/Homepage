@@ -159,18 +159,26 @@
     .dropout-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       cursor: pointer;
       user-select: none;
       margin-top: 1em;
-      transition: color 0.3s;
     }
-    .dropout-header:hover { color: #00bfa5; }
-    .dropout-header span { font-weight: 500; }
+    .dropout-header span.title {
+      font-weight: 500;
+      color: #555; /* weiches Grau */
+      margin-left: 0.5em; /* Abstand zwischen Kreuz und Titel */
+    }
     .dropout-toggle {
-      font-size: 1.2em;
-      transition: transform 0.3s;
-    }
+  font-size: 1.2em;
+  transition: transform 0.3s, color 0.3s;
+  color: #111; /* Standard: schwarz */
+}
+
+.dropout.open .dropout-toggle {
+  transform: rotate(45deg);
+  color: #00bfa5; /* Wird türkis, wenn offen */
+}
+
     .dropout.open .dropout-toggle {
       transform: rotate(45deg);
     }
@@ -215,21 +223,20 @@
   <div class="section-box"><a href="#kontakt">Kontakt / Termin</a></div>
 </div>
 
-<!-- HIER KOMMT DEIN KOMPLETTER INHALT 1:1 AUS DER LIEBLINGSVERSION -->
 <!-- SEXUALTHERAPIE -->
 <section id="sexualtherapie" class="detail">
   <h2>Sexualtherapie</h2>
   <p>In der Sexualtherapie arbeite ich mit Ihnen als Einzelperson an Themen der Sexualität. Als Grundlage dient mir eine moderne Adaption des körperorientierten Ansatzes Sexocorporel und die systemische Sexualberatung.</p>
   <div class="dropout">
     <div class="dropout-header">
-      <span>Mögliche Themen:</span>
       <span class="dropout-toggle">✚</span>
+      <span class="title">Mögliche Themen:</span>
     </div>
     <div class="dropout-content">
       <ul>
         <li>Wie exploriere ich meinen Umgang mit Lust und Unlust?</li>
         <li>Wie exploriere und identifiziere ich mich mit sexuellen Fantasien/Vorlieben/Kinks?</li>
-        <li>Wie erforsche ich meinen sexuellen Körper (z.B. sexuelles Selbstbild, Selbstvertrauen, Scham, sexuelle Identität, sexuelle Orientierung?</li>
+        <li>Wie erforsche ich meinen sexuellen Körper (z.B. sexuelles Selbstbild, Selbstvertrauen, Scham, sexuelle Identität, sexuelle Orientierung?)</li>
         <li>Wie finde ich nach einer Geburt in die Sexualität mit meinem neuen Körper zurück?</li>
         <li>Wie kann ich Orgasmen unterschiedlich empfinden oder verfrühtes oder ausbleibendes Kommen steuern lernen?</li>
         <li>Wie kann ich in Beziehung treten mit meiner Sexualität? Wie verführe ich? Wie erfrage ich?</li>
@@ -246,8 +253,8 @@
   <p>In der Paartherapie arbeite ich mit einer modernen Adaption des körperorientierten Ansatzes Sexocorporel, inspiriert von der systemischen (Sexual-)Beratung und der emotionsfokussierten Paartherapie.</p>
   <div class="dropout">
     <div class="dropout-header">
-      <span>Mögliche Themen:</span>
       <span class="dropout-toggle">✚</span>
+      <span class="title">Mögliche Themen:</span>
     </div>
     <div class="dropout-content">
       <ul>
@@ -269,8 +276,8 @@
   <p>Ich biete auf Anfrage individuell gestaltete Workshops, Seminare oder Inputreferate zu Themen der Sexualität an. Die Angebote können sowohl für Fachpersonen als auch für Bewohnende oder Klient*innen einer Institution konzipiert werden.</p>
   <div class="dropout">
     <div class="dropout-header">
-      <span>Mögliche Themen:</span>
       <span class="dropout-toggle">✚</span>
+      <span class="title">Mögliche Themen:</span>
     </div>
     <div class="dropout-content">
       <ul>
@@ -290,12 +297,11 @@
     <p>Als ausgebildete Sexologin MA beschäftige ich mich mit Sexualität auf unterschiedlichen Ebenen. Wissenschaftlich, beraterisch/therapeutisch und in der Sexuellen Bildung. Sexualität ist für mich weit mehr als eine körperliche Funktion. Sie ist Kommunikation, Beziehung, Identität, Hemmungslosigkeit, Lust – manchmal auch Angst, Grenzerfahrung und Herausforderung.</p>
     <div class="dropout">
       <div class="dropout-header">
-        <span>mehr lesen</span>
         <span class="dropout-toggle">✚</span>
+        <span class="title">mehr lesen</span>
       </div>
       <div class="dropout-content">
-        <p>Meine Arbeitsweise folgt dem körperorientierten Ansatz Sexocorporel und der systemischen Sexualberatung. Inspiriert bin ich von der emotionsfokussierten Paartherapie und dem Wheel of Consent von Betti Martin. 
-        Während den Sitzungen finden keine Berührungen statt. Wo sinnvoll, werden wir mit Körperübungen arbeiten, die entweder direkt angeleitet oder nach Hause genommen werden können. Wir gehen von ihrem Anliegen aus und erarbeiten gemeinsam einen zielorientierten Behandlungsplan. Dabei beleuchten wir kognitive, emotionale, physiologische und beziehungsbezogene Aspekte der Sexualität. Ohne Bewertung, ohne Druck, dafür mit Empathie, Reflexion und Humor.</p>
+        <p>Meine Arbeitsweise folgt dem körperorientierten Ansatz Sexocorporel und der systemischen Sexualberatung. Inspiriert bin ich von der emotionsfokussierten Paartherapie und dem Wheel of Consent von Betti Martin. Während den Sitzungen finden keine Berührungen statt. Wo sinnvoll, werden wir mit Körperübungen arbeiten, die entweder direkt angeleitet oder nach Hause genommen werden können. Wir gehen von ihrem Anliegen aus und erarbeiten gemeinsam einen zielorientierten Behandlungsplan. Dabei beleuchten wir kognitive, emotionale, physiologische und beziehungsbezogene Aspekte der Sexualität. Ohne Bewertung, ohne Druck, dafür mit Empathie, Reflexion und Humor.</p>
         <p>Während meiner Ausbildung habe mich intensiv mit der Gestaltung der Sexualität von trans* Personen auseinandergesetzt (siehe Masterarbeit). Weitere Schwerpunkte bildet die sexologische Arbeit mit alternativen Beziehungsformen, Umgang mit Lustlosigkeit und präventive Bildungsangebote zu sexueller Gewalt und sexuelles Körperbild. In einer Sexual- und Paartherapie sind allerdings alle Themen willkommen. Ich schätze die Vielfältigkeit der Themen rund um Sexualität und freue mich, wenn Sie unverbindlich mit mir Kontakt aufnehmen, um Ihr individuelles Thema anzuschauen, Wo angebracht, arbeite ich gerne interdisziplinär. So verweise ich sie an medizinische, psychologische oder beraterische Fachpersonen und Institutionen.</p>
         <p>Ausbildung und Tätigkeiten:</p>
         <ul>
@@ -316,8 +322,8 @@
   <p>Mir ist es ein Anliegen, dass finanzielle Aspekte kein Hindernis für eine Beratung oder Therapie darstellen. Wenn Ihre aktuellen Mittel begrenzt sind, finden wir gemeinsam eine Lösung.</p>
   <div class="dropout">
     <div class="dropout-header">
-      <span>Preise</span>
       <span class="dropout-toggle">✚</span>
+      <span class="title">Preise</span>
     </div>
     <div class="dropout-content">
       <ul>
@@ -330,6 +336,7 @@
   </div>
 </section>
 
+<!-- KONTAKT -->
 <section id="kontakt" class="detail contact">
   <h2>Kontakt / Termin</h2>
   <p>Sie können sich unverbindlich bei mir melden per Telefon, WhatsApp, Signal oder E-Mail, um Ihr Anliegen zu schildern und herauszufinden, ob eine Beratung passend für Sie ist.</p>
@@ -358,7 +365,7 @@
     });
   });
 
-  // Header Shadow on Scroll
+  // Header Schatten beim Scrollen
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => {
     if(window.scrollY > 10) header.classList.add('scrolled');
