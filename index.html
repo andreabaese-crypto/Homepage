@@ -71,13 +71,13 @@
 
     .spacer { height: 120px; }
 
-    .sections {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5em;
-      padding: 2em;
-    }
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.5em;          /* mehr Abstand zwischen Boxen */
+  padding: 5em 2em;    /* mehr Raum oben & unten */
+}
 
     .section-box {
       background: #fff;
@@ -184,11 +184,12 @@
       opacity: 0;
       transition: max-height 0.6s ease, opacity 0.4s ease;
     }
-    .dropout.open .dropout-content {
-      max-height: none;
-      opacity: 1;
-    }
-/* --- Burger Menü --- */
+.dropout.open .dropout-content {
+  max-height: none;
+  opacity: 1;
+}
+
+/* --- Burger Menü (Vollbild Overlay) --- */
 .burger {
   width: 28px;
   cursor: pointer;
@@ -201,38 +202,40 @@
   height: 3px;
   background: #111;
   width: 100%;
-  display: block;
 }
 
-/* Dropdown Menü */
+/* Overlay */
 .burger-menu {
-  position: absolute;
-  top: 100%;
-  right: 4em;
+  position: fixed;
+  inset: 0;
   background: #fff;
-  border: 1px solid #111;
-  padding: 1em;
   display: none;
-  flex-direction: column;
-  gap: 0.8em;
-  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
 }
 
-.burger-menu a {
-  text-decoration: none;
-  color: #111;
-  font-weight: 500;
-}
-
-.burger-menu a:hover {
-  text-decoration: underline;
-}
-
-/* sichtbar */
 .burger-menu.open {
   display: flex;
 }
 
+.burger-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+  text-align: center;
+}
+
+.burger-menu-content a {
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+}
+
+.burger-menu-content a:hover {
+  text-decoration: underline;
+}
     @media(max-width: 768px) {
       .sections { flex-direction: column; align-items: center; }
       .section-box { width: 80%; height: 130px; }
@@ -242,29 +245,32 @@
 </head>
 
 <body>
-
 <header>
   <nav class="header-nav">
     <span class="left-title">
       Sexologische Beratung <br>
       Andrea Baese
     </span>
- <div class="burger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
 
-  <div class="burger-menu">
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<!-- Vollbild Burger Menü -->
+<div class="burger-menu">
+  <nav class="burger-menu-content">
     <a href="#sexualtherapie">Sexualtherapie</a>
     <a href="#paartherapie">Paartherapie</a>
     <a href="#sexuelle Bildung und workshops">Sexuelle Bildung und Workshops</a>
     <a href="#uebermich">Über mich</a>
     <a href="#kosten">Kosten</a>
     <a href="#kontakt">Kontakt</a>
-  </div>
   </nav>
-</header>
+</div>
 
 <div class="spacer"></div>
 
@@ -273,11 +279,33 @@
   <div class="section-box"><a href="#paartherapie">Paartherapie</a></div>
   <div class="section-box"><a href="#workshops">Sexuelle Bildung & Workshops</a></div>
 </div>
-<div class="sections">
-  <div class="section-box"><a href="#uebermich">Über mich</a></div>
-  <div class="section-box"><a href="#kosten">Kosten</a></div>
-  <div class="section-box"><a href="#kontakt">Kontakt / Termin</a></div>
-</div>
+<!-- ÜBER MICH -->
+<section id="uebermich" class="detail">
+  <h2>Über mich</h2>
+  <div class="about-content" style="gap: 0.2em;">
+    <p>Als ausgebildete Sexologin MA beschäftige ich mich mit Sexualität auf unterschiedlichen Ebenen. Wissenschaftlich, beraterisch/therapeutisch und in der Sexuellen Bildung. Sexualität ist für mich weit mehr als eine körperliche Funktion. Sie ist Kommunikation, Beziehung, Identität, Hemmungslosigkeit, Lust – manchmal auch Angst, Grenzerfahrung und Herausforderung.</p>
+    <div class="dropout">
+      <div class="dropout-header">
+        <span class="dropout-toggle">✚</span>
+        <span class="title">mehr lesen</span>
+      </div>
+      <div class="dropout-content">
+        <p>Meine Arbeitsweise folgt dem körperorientierten Ansatz Sexocorporel und der systemischen Sexualberatung. Inspiriert bin ich von der emotionsfokussierten Paartherapie und dem Wheel of Consent von Betti Martin. Während den Sitzungen finden keine Berührungen statt. Wo sinnvoll, werden wir mit Körperübungen arbeiten, die entweder direkt angeleitet oder nach Hause genommen werden können. Wir gehen von ihrem Anliegen aus und erarbeiten gemeinsam einen zielorientierten Behandlungsplan. Dabei beleuchten wir kognitive, emotionale, physiologische und beziehungsbezogene Aspekte der Sexualität. Ohne Bewertung, ohne Druck, dafür mit Empathie, Reflexion und Humor.</p>
+        <p>Während meiner Ausbildung habe ich mich intensiv mit der Gestaltung der Sexualität von trans* Personen auseinandergesetzt (siehe Masterarbeit). Weitere Schwerpunkte bildet die sexologische Arbeit mit alternativen Beziehungsformen, Umgang mit Lustlosigkeit nach der Geburt und präventive Bildungsangebote zu sexueller Gewalt und sexuellem Körperbild. In einer Sexual- und Paartherapie sind allerdings alle Themen willkommen. Ich schätze die Vielfältigkeit der Themen rund um Sexualität und freue mich, wenn Sie unverbindlich mit mir Kontakt aufnehmen, um Ihr individuelles Thema anzuschauen, Wo angebracht, arbeite ich gerne interdisziplinär. So verweise ich sie an medizinische, psychologische oder beraterische Fachpersonen und Institutionen.</p>
+        <p>Ausbildung und Tätigkeiten:</p>
+        <ul>
+          <li>Master of Arts in Sexologie am Institut für Sexualpädagogik und Sexualtherapie Zürich</li>
+          <li>Bachelor of Arts in Sozialer Arbeit an der ZHAW</li>
+          <li>Workshopleiterin für Kinderschutz Schweiz: <em>„Mein Körper gehört mir“</em> und <em>„Love Limits“</em></li>
+          <li>Workshopleiterin für die Fachstelle jumpps*: <em>„beyou*tiful“</em>, <em>„fair lieben“</em>, <em>„mein Beruf“</em></li>
+          <li>Veröffentlichung: Masterarbeit: <em>Sexualberatung mit dem Modell Sexocoporel mit trans* Personen. Ein körperorientierter Ansatz zur Förderung von Sexualität und
+Körpererleben bei trans* Personen.
+</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- SEXUALTHERAPIE -->
 <section id="sexualtherapie" class="detail">
@@ -342,34 +370,6 @@
         <li>Umgang mit sexualisierter Gewalt und Diskriminierung</li>
         <li>Umgang mit Sexueller Vielfalt und Selbstbestimmung</li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ÜBER MICH -->
-<section id="uebermich" class="detail">
-  <h2>Über mich</h2>
-  <div class="about-content" style="gap: 0.2em;">
-    <p>Als ausgebildete Sexologin MA beschäftige ich mich mit Sexualität auf unterschiedlichen Ebenen. Wissenschaftlich, beraterisch/therapeutisch und in der Sexuellen Bildung. Sexualität ist für mich weit mehr als eine körperliche Funktion. Sie ist Kommunikation, Beziehung, Identität, Hemmungslosigkeit, Lust – manchmal auch Angst, Grenzerfahrung und Herausforderung.</p>
-    <div class="dropout">
-      <div class="dropout-header">
-        <span class="dropout-toggle">✚</span>
-        <span class="title">mehr lesen</span>
-      </div>
-      <div class="dropout-content">
-        <p>Meine Arbeitsweise folgt dem körperorientierten Ansatz Sexocorporel und der systemischen Sexualberatung. Inspiriert bin ich von der emotionsfokussierten Paartherapie und dem Wheel of Consent von Betti Martin. Während den Sitzungen finden keine Berührungen statt. Wo sinnvoll, werden wir mit Körperübungen arbeiten, die entweder direkt angeleitet oder nach Hause genommen werden können. Wir gehen von ihrem Anliegen aus und erarbeiten gemeinsam einen zielorientierten Behandlungsplan. Dabei beleuchten wir kognitive, emotionale, physiologische und beziehungsbezogene Aspekte der Sexualität. Ohne Bewertung, ohne Druck, dafür mit Empathie, Reflexion und Humor.</p>
-        <p>Während meiner Ausbildung habe ich mich intensiv mit der Gestaltung der Sexualität von trans* Personen auseinandergesetzt (siehe Masterarbeit). Weitere Schwerpunkte bildet die sexologische Arbeit mit alternativen Beziehungsformen, Umgang mit Lustlosigkeit nach der Geburt und präventive Bildungsangebote zu sexueller Gewalt und sexuellem Körperbild. In einer Sexual- und Paartherapie sind allerdings alle Themen willkommen. Ich schätze die Vielfältigkeit der Themen rund um Sexualität und freue mich, wenn Sie unverbindlich mit mir Kontakt aufnehmen, um Ihr individuelles Thema anzuschauen, Wo angebracht, arbeite ich gerne interdisziplinär. So verweise ich sie an medizinische, psychologische oder beraterische Fachpersonen und Institutionen.</p>
-        <p>Ausbildung und Tätigkeiten:</p>
-        <ul>
-          <li>Master of Arts in Sexologie am Institut für Sexualpädagogik und Sexualtherapie Zürich</li>
-          <li>Bachelor of Arts in Sozialer Arbeit an der ZHAW</li>
-          <li>Workshopleiterin für Kinderschutz Schweiz: <em>„Mein Körper gehört mir“</em> und <em>„Love Limits“</em></li>
-          <li>Workshopleiterin für die Fachstelle jumpps*: <em>„beyou*tiful“</em>, <em>„fair lieben“</em>, <em>„mein Beruf“</em></li>
-          <li>Veröffentlichung: Masterarbeit: <em>Sexualberatung mit dem Modell Sexocoporel mit trans* Personen. Ein körperorientierter Ansatz zur Förderung von Sexualität und
-Körpererleben bei trans* Personen.
-</em></li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>
@@ -448,7 +448,6 @@ burger.addEventListener('click', () => {
   burgerMenu.classList.toggle('open');
 });
 
-// Menü schließen nach Klick
 document.querySelectorAll('.burger-menu a').forEach(link => {
   link.addEventListener('click', () => {
     burgerMenu.classList.remove('open');
