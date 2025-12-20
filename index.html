@@ -40,10 +40,19 @@
     }
 
     .left-title {
-      line-height: 1.2;
-      font-weight: 500;
-      color: #111;
-    }
+  line-height: 1.15;
+  font-weight: 500;
+  color: #f26a1b; /* Orange */
+  font-size: 1.3em;
+}
+.left-title .subtitle {
+  display: block;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #f26a1b;
+  letter-spacing: 0.04em;
+}
+
 
     .right-link {
       text-decoration: none;
@@ -197,6 +206,9 @@
   flex-direction: column;
   gap: 6px;
 }
+.burger {
+  margin-left: auto;
+}
 
 .burger span {
   height: 3px;
@@ -247,10 +259,10 @@
 <body>
 <header>
   <nav class="header-nav">
-    <span class="left-title">
-      Sexologische Beratung <br>
-      Andrea Baese
-    </span>
+    <div class="left-title">
+  Sexologische Beratung
+  <span class="subtitle">Andrea Baese</span>
+</div>
 
     <div class="burger">
       <span></span>
