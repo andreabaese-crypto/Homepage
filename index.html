@@ -18,13 +18,14 @@
     }
 
     header {
-      background-color: #fff;
+      background-color: rgb(200, 240, 230); /* dunkleres Mintgrün */
       padding: 1.2em 4em;
-      border-bottom: 1px solid #111;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
       position: sticky;
       top: 0;
       z-index: 1000;
       transition: box-shadow 0.3s ease;
+backdrop-filter: saturate(1.1);
     }
 
     header.scrolled {
@@ -49,7 +50,7 @@
   display: block;
   font-size: 0.9em;
   font-weight: 300;
-  color: #f26a1b;
+  color: #e85d1a;
   letter-spacing: 0.04em;
 }
 
@@ -273,7 +274,7 @@
 </header>
 
 <!-- Vollbild Burger Menü -->
-<div class="burger-menu">
+<div class="burger-menu" id="burgerMenu">
   <nav class="burger-menu-content">
     <a href="#sexualtherapie">Sexualtherapie</a>
     <a href="#paartherapie">Paartherapie</a>
@@ -454,7 +455,7 @@ Körpererleben bei trans* Personen.
   });
 // Burger Menü öffnen/schließen
 const burger = document.querySelector('.burger');
-const burgerMenu = document.querySelector('.burger-menu');
+const burgerMenu = document.getElementById('burgerMenu');
 
 burger.addEventListener('click', () => {
   burgerMenu.classList.toggle('open');
@@ -464,6 +465,12 @@ document.querySelectorAll('.burger-menu a').forEach(link => {
   link.addEventListener('click', () => {
     burgerMenu.classList.remove('open');
   });
+});
+// Klick auf den Hintergrund schließt das Burger-Menü
+burgerMenu.addEventListener('click', (e) => {
+  if (e.target === burgerMenu) {
+    burgerMenu.classList.remove('open');
+  }
 });
 </script>
 
