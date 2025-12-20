@@ -250,10 +250,49 @@ backdrop-filter: saturate(1.1);
   text-decoration: underline;
 }
     @media(max-width: 768px) {
-      .sections { flex-direction: column; align-items: center; }
-      .section-box { width: 80%; height: 130px; }
-      .header-nav { flex-direction: column; gap: 0.4em; }
-    }
+
+  /* Sections */
+  .sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-box {
+    width: 80%;
+    height: 130px;
+  }
+
+  /* Header Layout */
+  header {
+    padding: 0.8em 1.2em;
+  }
+
+  .header-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Schrift im Header kleiner */
+  .left-title {
+    font-size: 1.05em;
+    line-height: 1.1;
+  }
+
+  .left-title .subtitle {
+    font-size: 0.85em;
+  }
+
+  /* Burger ganz nach rechts */
+  .burger {
+    margin-left: auto;
+  }
+}
+@media(max-width: 768px) {
+  .left-title .subtitle {
+    opacity: 0.85;
+  }
+}
+
   </style>
 </head>
 
