@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sexologische Beratung – Andrea Baese</title>
+
+  <!-- SYNE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #983213;
+      --dark: #A3B2FF;
+      --accent: #A3B2FF;
+      --line: #A3B2FF;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Syne', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    /* ---------- BURGER ---------- */
+    .burger {
+      position: fixed;
+      top: 2em;
+      right: 2.5em;
+      width: 26px;
+      height: 18px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .burger span {
+      display: block;
+      height: 2px;
+      background: var(--dark);
+      margin-bottom: 6px;
+      transition: 0.3s;
+    }
+
+    /* ---------- MENU OVERLAY ---------- */
+    .menu {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      font-size: 1.4em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      z-index: 1000;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: var(--accent);
+    }
+
+    .menu.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 10em 4em 9em;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero h1 {
+      font-size: clamp(3.8rem, 7vw, 6.2rem);
+      font-weight: 700;
+      line-height: 1.03;
+      margin: 0;
+      color: var(--accent);
+    }
+
+    .hero .claim {
+      margin-top: 2.5em;
+      font-size: 1.4em;
+      max-width: 520px;
+      font-weight: 400;
+    }
+
+    .hero .name {
+      margin-top: 3em;
+      font-size: 0.85em;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 7em 4em;
+      border-top: 1px solid var(--line);
+    }
+
+    section h2 {
+      font-size: 2.1em;
+      font-weight: 600;
+      margin-bottom: 1em;
+      color: var(--accent);
+    }
+
+    .content {
+      max-width: 700px;
+      font-size: 1.15em;
+      font-weight: 400;
+    }
+
+    /* ---------- KONTAKT ---------- */
+    .contact a {
+      color: var(--dark);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding: 4em;
+      border-top: 1px solid var(--line);
+      font-size: 0.75em;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .hero, section {
+        padding: 6em 2em;
+      }
+
+      .hero .claim {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- BURGER -->
+<div class="burger" id="burger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+  <a href="#about">Über mich</a>
+  <a href="#sexualtherapie">Sexualtherapie</a>
+  <a href="#paartherapie">Paartherapie</a>
+  <a href="#bildung">Sexuelle Bildung & Workshops</a>
+  <a href="#kosten">Kosten</a>
+  <a href="#kontakt">Kontakt</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Sexologische<br>Beratung</h1>
+
+  <div class="claim">
+    Ein Raum für Sexualität,<br>
+    Körper und Beziehung.
+  </div>
+
+  <div class="name">Andrea Baese</div>
+</section>
+
+<section id="about">
+  <h2>Über mich</h2>
+  <div class="content">
+    Ich bin Sexologin MA und begleite Menschen bei Fragen
+    rund um Sexualität, Beziehung und Körpererleben.
+    Meine Arbeit ist körperorientiert, systemisch
+    und wissenschaftlich fundiert.
+  </div>
+</section>
+
+<section id="sexualtherapie">
+  <h2>Sexualtherapie</h2>
+  <div class="content">
+    Einzelbegleitung bei Themen wie Lust, Unlust,
+    sexueller Identität, Körperbild
+    und sexueller Entwicklung.
+  </div>
+</section>
+
+<section id="paartherapie">
+  <h2>Paartherapie</h2>
+  <div class="content">
+    Paartherapie bietet Raum für Nähe,
+    Begehren, Konflikt und Veränderung
+    in bestehenden Beziehungen.
+  </div>
+</section>
+
+<section id="bildung">
+  <h2>Sexuelle Bildung & Workshops</h2>
+  <div class="content">
+    Bildungsangebote und Workshops
+    für Fachpersonen, Institutionen
+    und Gruppen.
+  </div>
+</section>
+
+<section id="kosten">
+  <h2>Kosten</h2>
+  <div class="content">
+    Die Sitzungen werden privat verrechnet.
+    Informationen zu Dauer und Kosten
+    erhalten Sie gerne auf Anfrage.
+  </div>
+</section>
+
+<section id="kontakt" class="contact">
+  <h2>Kontakt</h2>
+  <div class="content">
+    Zähringerstrasse 12 · 8001 Zürich<br><br>
+    <a href="mailto:andrea.baese@sexologischeberatung.ch">
+      andrea.baese@sexologischeberatung.ch
+    </a><br>
+    <a href="tel:+41792096327">079 209 63 27</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Andrea Baese · Sexologische Beratung
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('menu');
+
+  burger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
