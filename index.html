@@ -146,7 +146,7 @@
     }
 
     /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 900px) {
+    @media (max-width: 480px) {
       .hero, section {
         padding: 6em 2em;
       }
@@ -191,13 +191,15 @@
   }
   /* ---------- ÜBER MICH: TEXT + FOTO ---------- */
 #about .about-layout {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 220px;
   gap: 3em;
+  align-items: start;
 }
 
 #about .about-text {
   flex: 1;
+  min-width: 0;
 }
 
 #about .about-image {
@@ -205,22 +207,29 @@
 }
 
 #about .about-image img {
-  width: 100%;
+  width: 50%;
   height: auto;
   display: block;
   border-radius: 2px;
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   #about .about-layout {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   #about .about-image {
     max-width: 220px;
+  }
+}
+  #about .about-image {
+    max-width: 220px;
     margin-top: 2em;
   }
+
+#about .about-image {
+  max-width: 220px;
 }
   </style>
 </head>
@@ -271,7 +280,7 @@
             <span class="title">mehr lesen</span>
           </div>
           <div class="dropout-content">
-        <p>Meine Arbeitsweise folgt dem körperorientierten Ansatz Sexocorporel und der systemischen Sexualberatung. Inspiriert bin ich von der emotionsfokussierten Paartherapie und dem Wheel of Consent von Betti Martin. Während den Sitzungen finden keine Berührungen statt. Wo sinnvoll, werden wir mit Körperübungen arbeiten, die entweder direkt angeleitet oder nach Hause genommen werden können. Wir gehen von Ihrem Anliegen aus und erarbeiten gemeinsam einen zielorientierten Behandlungsplan. Dabei beleuchten wir kognitive, emotionale, physiologische und beziehungsbezogene Aspekte der Sexualität. Ohne Bewertung, ohne Druck, dafür mit Empathie, Reflexion und Humor.</p>
+        <p>Meine Arbeitsweise folgt dem körperorientierten Ansatz Sexocorporel und der systemischen Sexualberatung. Inspiriert bin ich von der emotionsfokussierten Paartherapie und dem Wheel of Consent von Betti Martin.</p>
         <p>Während meiner Ausbildung habe ich mich intensiv mit der Gestaltung der Sexualität von trans* Personen auseinandergesetzt (siehe Masterarbeit). Weitere Schwerpunkte bildet die sexologische Arbeit mit alternativen Beziehungsformen, Umgang mit Lustlosigkeit nach der Geburt und präventive Bildungsangebote zu sexueller Gewalt und sexuellem Körperbild. In einer Sexual- und Paartherapie sind allerdings alle Themen willkommen. Ich schätze die Vielfältigkeit der Themen rund um Sexualität und freue mich, wenn Sie unverbindlich mit mir Kontakt aufnehmen, um Ihr individuelles Thema anzuschauen, wo angebracht, arbeite ich gerne interdisziplinär. So verweise ich sie an medizinische, psychologische oder beraterische Fachpersonen und Institutionen.</p>
         <p>Ausbildung und Tätigkeiten:</p>
         <ul>
@@ -314,9 +323,16 @@
         <li>Wie kann ich in Beziehung treten mit meiner Sexualität? Wie verführe ich? Wie erfrage ich?</li>
         <li>Wie gehe ich mit Schmerzen beim Sex um (z. B. Vaginismus, Dyspareunie, Erektile Dysfunktion, Umgang mit Geschlechtskrankheiten, Sexualität bei chronischen Erkrankungen wie z.B. Krebs, Diabetes etc.)?</li>
         <li>Wie gehe ich mit gesellschaftlich stigmatisierten Themen um (z.B. Sexsucht, Asexualität, aussergewöhnliche sexuelle Vorlieben, Versagensängste, Umgang mit Pornografie)?</li>
-      </ul>
+      </ul> 
     </div>
   </div>
+    <div class="dropout">
+    <div class="dropout-header">
+      <span class="dropout-toggle">✚</span>
+      <span class="title">Ablauf einer Sitzung:</span>
+    </div>
+    <div class="dropout-content">
+<p>Während den Sitzungen finden keine Berührungen statt. Wo sinnvoll, werden wir mit Körper-, Wahrnehmungs- und Atemübungen arbeiten, die entweder direkt angeleitet oder nach Hause genommen werden können. Wir gehen von Ihrem Anliegen aus und erarbeiten gemeinsam einen zielorientierten Behandlungsplan. Dabei beleuchten wir kognitive, emotionale, physiologische und beziehungsbezogene Aspekte der Sexualität. Ohne Bewertung, ohne Druck, dafür mit Empathie, Reflexion und Humor.</p>
 </section>
 
 <!-- PAARTHERAPIE -->
@@ -366,15 +382,10 @@
 <section id="kosten" class="detail">
   <h2>Kosten</h2>
   <p>Mir ist es ein Anliegen, dass finanzielle Aspekte kein Hindernis für eine Beratung oder Therapie darstellen. Wenn Ihre aktuellen Mittel begrenzt sind, finden wir gemeinsam eine Lösung.</p>
-  <div class="dropout">
-    <div class="dropout-header">
-      <span class="dropout-toggle">✚</span>
-      <span class="title">Preise</span>
-    </div>
-    <div class="dropout-content">
+
       <ul>
-        <li>Einzelperson, 60 Minuten in der Praxis: 140.–</li>
-        <li>Einzelperson, 60 Minuten per Zoom: 110.–</li>
+        <li>Einzelperson, 60 Minuten in der Praxis: 160.–</li>
+        <li>Einzelperson, 60 Minuten per Zoom: 120.–</li>
         <li>Paare, 60 Minuten in der Praxis: 180.–</li>
         <li>Workshops, Referate: nach Vereinbarung</li>
       </ul>
