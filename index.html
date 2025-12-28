@@ -189,7 +189,39 @@
   max-height: none;
   opacity: 1;
   }
+  /* ---------- ÜBER MICH: TEXT + FOTO ---------- */
+#about .about-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 3em;
+}
 
+#about .about-text {
+  flex: 1;
+}
+
+#about .about-image {
+  flex: 0 0 220px;
+}
+
+#about .about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #about .about-layout {
+    flex-direction: column;
+  }
+
+  #about .about-image {
+    max-width: 220px;
+    margin-top: 2em;
+  }
+}
   </style>
 </head>
 
@@ -227,30 +259,42 @@
 
 <section id="about" class="detail">
   <h2>Über mich</h2>
-  <div class="about-content" style="gap: 0.2em;">
-    <p>Als ausgebildete Sexologin MA beschäftige ich mich mit Sexualität auf unterschiedlichen Ebenen. Wissenschaftlich, beraterisch/therapeutisch und in der Sexuellen Bildung. Sexualität ist für mich weit mehr als eine körperliche Funktion. Sie ist Kommunikation, Beziehung, Identität, Hemmungslosigkeit, Lust – manchmal auch Angst, Grenzerfahrung und Herausforderung.</p>
-    <div class="dropout">
-      <div class="dropout-header">
-        <span class="dropout-toggle">✚</span>
-        <span class="title">mehr lesen</span>
-      </div>
-      <div class="dropout-content">
+
+  <div class="about-layout">
+    <div class="about-text">
+      <div class="about-content" style="gap: 0.2em;">
+        <p>Als ausgebildete Sexologin MA beschäftige ich mich mit Sexualität auf unterschiedlichen Ebenen. Wissenschaftlich, beraterisch/therapeutisch und in der Sexuellen Bildung. Sexualität ist für mich weit mehr als eine körperliche Funktion. Sie ist Kommunikation, Beziehung, Identität, Hemmungslosigkeit, Lust – manchmal auch Angst, Grenzerfahrung und Herausforderung.</p>
+
+        <div class="dropout">
+          <div class="dropout-header">
+            <span class="dropout-toggle">✚</span>
+            <span class="title">mehr lesen</span>
+          </div>
+          <div class="dropout-content">
         <p>Meine Arbeitsweise folgt dem körperorientierten Ansatz Sexocorporel und der systemischen Sexualberatung. Inspiriert bin ich von der emotionsfokussierten Paartherapie und dem Wheel of Consent von Betti Martin. Während den Sitzungen finden keine Berührungen statt. Wo sinnvoll, werden wir mit Körperübungen arbeiten, die entweder direkt angeleitet oder nach Hause genommen werden können. Wir gehen von Ihrem Anliegen aus und erarbeiten gemeinsam einen zielorientierten Behandlungsplan. Dabei beleuchten wir kognitive, emotionale, physiologische und beziehungsbezogene Aspekte der Sexualität. Ohne Bewertung, ohne Druck, dafür mit Empathie, Reflexion und Humor.</p>
         <p>Während meiner Ausbildung habe ich mich intensiv mit der Gestaltung der Sexualität von trans* Personen auseinandergesetzt (siehe Masterarbeit). Weitere Schwerpunkte bildet die sexologische Arbeit mit alternativen Beziehungsformen, Umgang mit Lustlosigkeit nach der Geburt und präventive Bildungsangebote zu sexueller Gewalt und sexuellem Körperbild. In einer Sexual- und Paartherapie sind allerdings alle Themen willkommen. Ich schätze die Vielfältigkeit der Themen rund um Sexualität und freue mich, wenn Sie unverbindlich mit mir Kontakt aufnehmen, um Ihr individuelles Thema anzuschauen, wo angebracht, arbeite ich gerne interdisziplinär. So verweise ich sie an medizinische, psychologische oder beraterische Fachpersonen und Institutionen.</p>
         <p>Ausbildung und Tätigkeiten:</p>
         <ul>
-          <li>Master of Arts in Sexologie am Institut für Sexualpädagogik und Sexualtherapie Zürich</li>
-          <li>Bachelor of Arts in Sozialer Arbeit an der ZHAW</li>
-          <li>Workshopleiterin für Kinderschutz Schweiz: <em>„Mein Körper gehört mir“</em> und <em>„Love Limits“</em></li>
-          <li>Workshopleiterin für die Fachstelle jumpps*: <em>„beyou*tiful“</em>, <em>„fair lieben“</em>, <em>„mein Beruf“</em></li>
-          <li>Veröffentlichung: Masterarbeit: <em>Sexualberatung mit dem Modell Sexocoporel mit trans* Personen. Ein körperorientierter Ansatz zur Förderung von Sexualität und
-Körpererleben bei trans* Personen.
-</em></li>
-        </ul>
+  <li>Master of Arts in Sexologie am Institut für Sexualpädagogik und Sexualtherapie Zürich</li>
+  <li>Bachelor of Arts in Sozialer Arbeit an der ZHAW</li>
+  <li>Workshopleiterin für Kinderschutz Schweiz: <em>„Mein Körper gehört mir“</em> und <em>„Love Limits“</em></li>
+  <li>Workshopleiterin für die Fachstelle jumpps*: <em>„beyou*tiful“</em>, <em>„fair lieben“</em>, <em>„mein Beruf“</em></li>
+  <li>
+    Veröffentlichung: Masterarbeit:  
+    <em>Sexualberatung mit dem Modell Sexocoporel mit trans* Personen.  
+    Ein körperorientierter Ansatz zur Förderung von Sexualität und Körpererleben bei trans* Personen.</em>
+  </li>
+</ul>
+        </div>
       </div>
     </div>
+    <div class="about-image">
+      <img src="andrea-baese.jpg" alt="Andrea Baese">
+    </div>
+
   </div>
 </section>
+
 <!-- SEXUALTHERAPIE -->
 <section id="sexualtherapie" class="detail">
   <h2>Sexualtherapie</h2>
