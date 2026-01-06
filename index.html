@@ -445,6 +445,18 @@ Als Sozialpädagogin verfüge ich über Erfahrung in verschiedenen Arbeitsfelder
       menu.classList.remove('open');
     });
   });
+  menu.addEventListener('click', (e) => {
+  if (e.target === menu) {
+    menu.classList.remove('open');
+  }
+});
+
+// ESC-Taste schliesst das Menü (Desktop)
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    menu.classList.remove('open');
+  }
+});
 
     // Dropout-Funktion
   document.querySelectorAll('.dropout-header').forEach(header => {
