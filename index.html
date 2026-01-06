@@ -67,9 +67,11 @@
     }
 
     .menu a {
-      text-decoration: none;
-      color: var(--accent);
-    }
+  text-decoration: none;
+  color: var(--accent);
+  text-align: center;
+  max-width: 90%;
+}
 
     .menu.open {
       opacity: 1;
@@ -78,9 +80,10 @@
 
     /* ---------- HERO ---------- */
     .hero {
-      padding: 10em 4em 9em;
-      border-bottom: 1px solid var(--line);
-    }
+  min-height: 100vh;
+  padding: 10em 4em 9em;
+  border-bottom: 1px solid var(--line);
+}
 
     .hero h1 {
       font-size: clamp(3.8rem, 7vw, 6.2rem);
@@ -145,10 +148,25 @@
       text-transform: uppercase;
       font-weight: 500;
     }
+    @media (max-width: 900px) {
+  footer {
+    padding: 2em 1em;
+    font-size: 0.55em;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+}
 
     /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 900px) {
-  .hero,
+ @media (max-width: 900px) {
+  .hero {
+    height: 100vh;
+    padding: 4em 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   section {
     padding: 4em 1.2em;
   }
@@ -160,6 +178,7 @@
   .hero .claim {
     font-size: 1.1em;
   }
+}
     }
     /* --- Dropout Stil --- */
     .dropout-header {
